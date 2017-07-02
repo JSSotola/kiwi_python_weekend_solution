@@ -91,7 +91,7 @@ def find_flight(payload):
     """
 
     flight_search = request_server_response(requests.get, "https://api.skypicker.com/flights?", params=payload)
-    print(payload)
+
     flight_search_results = parse_json(flight_search)
 
     # if no results returned tell the user to fix the parameters
